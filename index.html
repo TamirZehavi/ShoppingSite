@@ -6,22 +6,35 @@
 
 <html>
 
+
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="jquery-3.5.1.js"></script>
+    <script src="Scripts.js"></script>
     <link rel="Stylesheet" type="text/css" href="Stylesheet.css">
+    <link rel="Stylesheet" type="text/css" href="Popup.css">
     <title>Tam's Store</title>
     <meta charset="utf-8">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
-
 </head>
 
 <body>
+    <div id="hide" class="hide">
+        <div class="popup">
+            <div class="cart_bottom_row">
+                <div class="total_price">
+                    Total: 0$
+                </div>
+                <button type="button" class="purchase" disabled>purchase</button>
+            </div>
+        </div>
+    </div>
+
     <div class="page_container">
         <header class="store_header">
             <div class="left_section">
                 <span class="store_title">My super awsome store!</span>
 
-                <img class="image" src="https://img.favpng.com/12/18/15/shopping-cart-icon-png-favpng-e5DiMUYLNYaTjdsibphFUCAxC.jpg" alt="cart">
+                <img id="cartImage" class="image" src="https://img.favpng.com/12/18/15/shopping-cart-icon-png-favpng-e5DiMUYLNYaTjdsibphFUCAxC.jpg" alt="cart">
             </div>
 
             <div class="right_section">
@@ -51,7 +64,7 @@
                             </p>
                         </div>
                         <div class="add_to_cart">
-                            <button class="add_to_cart">Add To Cart</button>
+                            <button class="add_to_cart_button">Add To Cart</button>
                         </div>
                     </div>
 
@@ -67,7 +80,7 @@
                             </p>
                         </div>
                         <div class="add_to_cart">
-                            <button class="add_to_cart">Add To Cart</button>
+                            <button class="add_to_cart_button">Add To Cart</button>
                         </div>
                     </div>
 
@@ -83,7 +96,7 @@
                             </p>
                         </div>
                         <div class="add_to_cart">
-                            <button class="add_to_cart">Add To Cart</button>
+                            <button class="add_to_cart_button">Add To Cart</button>
                         </div>
                     </div>
 
@@ -99,7 +112,7 @@
                             </p>
                         </div>
                         <div class="add_to_cart">
-                            <button class="add_to_cart">Add To Cart</button>
+                            <button class="add_to_cart_button">Add To Cart</button>
                         </div>
                     </div>
 
@@ -115,7 +128,7 @@
                             </p>
                         </div>
                         <div class="add_to_cart">
-                            <button class="add_to_cart">Add To Cart</button>
+                            <button class="add_to_cart_button">Add To Cart</button>
                         </div>
                     </div>
 
@@ -131,7 +144,7 @@
                             </p>
                         </div>
                         <div class="add_to_cart">
-                            <button class="add_to_cart">Add To Cart</button>
+                            <button class="add_to_cart_button">Add To Cart</button>
                         </div>
                     </div>
 
@@ -147,7 +160,7 @@
                             </p>
                         </div>
                         <div class="add_to_cart">
-                            <button class="add_to_cart">Add To Cart</button>
+                            <button class="add_to_cart_button">Add To Cart</button>
                         </div>
                     </div>
 
@@ -163,7 +176,7 @@
                             </p>
                         </div>
                         <div class="add_to_cart">
-                            <button class="add_to_cart">Add To Cart</button>
+                            <button class="add_to_cart_button">Add To Cart</button>
                         </div>
                     </div>
 
@@ -179,7 +192,7 @@
                             </p>
                         </div>
                         <div class="add_to_cart">
-                            <button class="add_to_cart">Add To Cart</button>
+                            <button class="add_to_cart_button">Add To Cart</button>
                         </div>
                     </div>
 
@@ -195,7 +208,7 @@
                             </p>
                         </div>
                         <div class="add_to_cart">
-                            <button class="add_to_cart">Add To Cart</button>
+                            <button class="add_to_cart_button">Add To Cart</button>
                         </div>
                     </div>
 
