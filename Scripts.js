@@ -9,7 +9,16 @@ function ready() { //set all event listeners after page's done loading
     for (var i = 0; i < AddToCartButtons.length; i++) {
         AddToCartButtons[i].addEventListener('click', GetItemElements);
     }
+    // var itemGrid = document.getElementsByClassName('item');
+    // for (var i = 0; i < itemGrid.length; i++) {
+    //     itemGrid[i].addEventListener('mouseover', ChangeColor);
+    // }
 }
+
+// function ChangeColor(event) {
+//     var item = event.target;
+//     item.style.backgroundColor = "red";
+// }
 
 function GetItemElements(event) {
     var imageSrc = event.target.parentElement.parentElement.getElementsByClassName('item_picture')[1].src;
@@ -100,16 +109,15 @@ function UpdateTotalPrice() {
 //Displaying a message when leaving the page
 beenAskedAboutClosing = false;
 
-window.addEventListener('beforeunload', function(e) {
+document.addEventListener('mouseleave', function() {
     if (!beenAskedAboutClosing) {
-        e.preventDefault();
-        e.returnValue = '';
+        alert("Get the mouse's ass back in the window");
     }
     beenAskedAboutClosing = true;
 });
 
 //Add CSS hover functionality
-var css = '.cart_item:hover{ background-color: #b6985f }';
+var css = '.cart_item:hover{ background-color: #b6985f } .MainSells .item:hover {background-color: #ba538c;}';
 var style = document.createElement('style');
 
 if (style.styleSheet) {
