@@ -9,16 +9,15 @@ function ready() { //set all event listeners after page's done loading
     for (var i = 0; i < AddToCartButtons.length; i++) {
         AddToCartButtons[i].addEventListener('click', GetItemElements);
     }
-    // var itemGrid = document.getElementsByClassName('item');
-    // for (var i = 0; i < itemGrid.length; i++) {
-    //     itemGrid[i].addEventListener('mouseover', ChangeColor);
-    // }
+    document.getElementsByClassName('purchase')[0].addEventListener('click', AddTotalPriceInput);
 }
 
-// function ChangeColor(event) {
-//     var item = event.target;
-//     item.style.backgroundColor = "red";
-// }
+function AddTotalPriceInput() {
+    var totalPriceHTML = document.getElementsByClassName('total_price')[0].innerHTML;
+    document.getElementById('AddTotalPriceHere').value = totalPriceHTML;
+}
+
+numberOfItems = 0;
 
 function GetItemElements(event) {
     var imageSrc = event.target.parentElement.parentElement.getElementsByClassName('item_picture')[1].src;
@@ -38,7 +37,7 @@ function AddToCart(title, price, imageSrc) {
             return;
         }
     }
-
+    numberOfItems++;
 
     var cartBottom = document.getElementsByClassName('cart_bottom_row')[0];
     var popup = document.getElementsByClassName('popup')[0];
@@ -50,7 +49,10 @@ function AddToCart(title, price, imageSrc) {
             </div>
             <div class="cart_title">${title}</div>
             <div class="cart_price">${price}</div>
-            <input type="number" class="quantity" name="quantity" min="0" value="1">
+            <input type="number" class="quantity" name="item` + numberOfItems + `[]" min="0" value="1">
+            <input type="hidden" name="item` + numberOfItems + `[]" value="${price}">
+            <input type="hidden" name="item` + numberOfItems + `[]" value="${title}">
+            <input type="hidden" name="item` + numberOfItems + `[]" value="${imageSrc}">
             <button class="remove_button" type="button">Remove</button>`
     cartItem.innerHTML = cartItemHTML;
     popup.insertBefore(cartItem, cartBottom);
